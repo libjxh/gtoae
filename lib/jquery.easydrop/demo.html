@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>index</title>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery.dropdown.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="skeleton.buttons.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="dropdown.css" type="text/css" media="all" />
+	<style>
+		*{
+			font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}	
+		p {
+			color:#777;
+		}
+		.dropdown-panel {
+			padding:10px 20px;
+		}
+		.dropdown-panel li {
+			margin:10px 0;
+		}
+		.dropdown-panel a {
+			cursor:pointer;
+			background:lightblue;
+			border-radius:4px;
+			padding:2px 4px;
+			margin:4px 0;
+		}
+		
+		
+	</style>
+	
+</head>
+
+<body>
+background:lightblue;
+	<h2><a href="#">Easy DropDown</a></h2>
+
+<div id='example-1'>
+
+	<div id='mydropdown-1' class="dropdown">
+	    <a class="dropdown-button">Images<img src="dropdown.png" class="dropdown-icon"/></a>
+		<div class="dropdown-panel">
+			<h4>Put whatever you want here!</h4>
+		</div>
+	</div>
+	
+	<p>... with basic styling</p>
+
+</div>
+
+<div id='example-2'>
+
+	<div id='mydropdown-2' class="dropdown">
+	    <a class="dropdown-button button">Images<img src="dropdown.png" class="dropdown-icon"/></a>
+		<div class="dropdown-panel">
+			<h4>Put whatever you want here!</h4>
+			<ul>
+				<li><a id='item-1'>Item 1</a></li>
+				<li><a id='item-2'>Item 2</a></li>
+				<li><a id='item-3'>Item 3</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<p>... with content-click callback and <a href="http://www.getskeleton.com">skeleton</a> button styling</p>
+	
+</div>
+
+<div id='example-3'>
+
+	<div id='mydropdown-3' class="dropdown">
+	    <a class="dropdown-button button">Images<img src="dropdown.png" class="dropdown-icon"/></a>
+		<div class="dropdown-panel">
+			<h4>Put whatever you want here!</h4>
+			<ul>
+				<li><a id='item-1'>Item 1</a></li>
+				<li><a id='item-2'>Item 2</a></li>
+				<li><a id='item-3'>Item 3</a></li>
+				<li><a id='item-4'>Item 4</a></li>
+				<li><a id='item-5'>Item 5</a></li>
+				<li><a id='item-6'>Item 6</a></li>
+				<li><a id='item-7'>Item 7</a></li>
+				<li><a id='item-8'>Item 8</a></li>
+				<li><a id='item-9'>Item 9</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<p>... with panel <code>width</code> and <code>min-height</code> options</p>
+
+</div>
+
+
+<div id='example-4'>
+
+	<div id='mydropdown-4' class="dropdown">
+	    <a class="dropdown-button button">Images<img src="dropdown.png" class="dropdown-icon"/></a>
+		<div class="dropdown-panel">
+			<h4>Put whatever you want here!</h4>
+			<form><input type="text" name=""><br><input type="text" name=""><br><input type="text" name=""><br><input type="button" id="mybutton" value="" onclick=""></form>
+		</div>
+	</div>
+
+	<p>... with panel <code>width</code> and <code>min-height</code> options</p>
+
+</div>
+
+</body>
+
+<script>
+
+var callback = function(target) { alert( 'You clicked ' + $(target).attr('id')); }
+
+// Initialize dropdowns:
+$('#mydropdown-1').dropdown(); 
+$('#mydropdown-2').dropdown({callback:callback}); 
+$('#mydropdown-3').dropdown({width:'400px', maxHeight:'180px',callback:callback}); 
+$('#mydropdown-4').dropdown({width:'500px', maxHeight:'680px',callback:callback}); 
+// Force one open:
+$('#mydropdown-2').dropdown('show'); 
+
+</script>
+
+<script>
+
+
+
+</script>
+
+</html>
